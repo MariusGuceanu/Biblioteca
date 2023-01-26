@@ -14,7 +14,7 @@ public class Menu {
 		int opcion_menu;
 
 		do {
-			System.out.println("------MENU-------");
+			System.out.println("------MENU PRINCIPAL-------");
 			System.out.println(OPCION_LIBROS + ". Gestionar libros");
 			System.out.println(OPCION_SOCIOS + ". Gestionar socios");
 			System.out.println(OPCION_PRESTAMOS + ". Gestionar prestamos");
@@ -26,14 +26,19 @@ public class Menu {
 			case OPCION_LIBROS:
 				System.out.println("Gestion de libros\n");
 				System.out.println("¿Que desea hacer?");
+				System.out.println("Insertar libros");
+				System.out.println("Eliminar libros");
+				System.out.println("Ver libros");
 				break;
 			case OPCION_SOCIOS:
 				System.out.println("Gestion de socios\n");
 				System.out.println("¿Que desea hacer?");
+				System.out.println("Ver socios");
 				break;
 			case OPCION_PRESTAMOS:
 				System.out.println("Gestion de prestamos\n");
 				System.out.println("¿Que desea hacer?");
+				System.out.println("Realizar prestamo");
 				break;
 			case SALIR:
 				System.out.println("ADIOS");
