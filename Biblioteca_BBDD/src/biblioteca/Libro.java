@@ -1,6 +1,10 @@
 package biblioteca;
 
 public class Libro {
+	
+	private String titulo;
+	private String autor;
+	private int num_Pag;
 
 	public Libro() {
 		
@@ -38,8 +42,5 @@ public class Libro {
 	public void setNum_Pag(int num_Pag) {
 		this.num_Pag = num_Pag;
 	}
-	private String titulo;
-	private String autor;
-	private int num_Pag;
 	
 }
