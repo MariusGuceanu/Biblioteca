@@ -7,9 +7,9 @@ import java.sql.SQLException;
 public class Conector {
 	protected Connection cn;
 
-	public Conector() {
+	public void conector() {
 		try {
-			Class.forName("com.mysql.jdbc.Driver");
+			Class.forName("com.mysql.cj.jdbc.Driver");
 			String url = "jdbc:mysql://localhost/biblioteca";
 			cn = (Connection) DriverManager.getConnection(url, "root", "");
 		}catch (Exception e) {
