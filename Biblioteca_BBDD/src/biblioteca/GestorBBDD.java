@@ -21,8 +21,10 @@ public class GestorBBDD extends Conector {
 		
 	}
 	
-	public void eliminarLibro (int id) throws ClassNotFoundException, SQLException {
-			
+	public void eliminarLibro (Integer id, Scanner scan) throws ClassNotFoundException, SQLException {
+		
+		Libro libro;
+		id = FormulariosDedatos.pedirIdLibro(id, scan);
 		PreparedStatement preparedSt = cn.prepareStatement("DELETE FROM libros WHERE id = ?");
 		preparedSt.setInt(1, id);
 		preparedSt.execute();

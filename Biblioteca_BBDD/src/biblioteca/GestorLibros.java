@@ -12,10 +12,12 @@ public class GestorLibros {
 		final int SALIR = 0;
 
 		Scanner scan = new Scanner(System.in);
-		int opcion_menu;
+		int opcion;
 
 		GestorBBDD gestorBBDD = new GestorBBDD();
 		Libro libro = new Libro();
+		Integer id = null;
+		
 		do {
 			System.out.println("------MENU-------");
 			System.out.println(INSERTAR_LIBRO + ". Insertar libro");
@@ -23,16 +25,22 @@ public class GestorLibros {
 			System.out.println(OPCION_TRES + ". Modificar libro");
 			System.out.println(SALIR + ". Salir");
 			System.out.println("Elije una de las opciones");
-			opcion_menu = Integer.parseInt(scan.nextLine());
+			opcion = Integer.parseInt(scan.nextLine());
 
-			switch (opcion_menu) {
+			switch (opcion) {
 			case INSERTAR_LIBRO:
 				gestorBBDD.conector();
 				gestorBBDD.insertarLibros(libro, scan);
 				gestorBBDD.cerrar();
+				
+				Visor.mostrarMensaje ("Libro insertado");
 				break;
 			case ELIMINAR_LIBRO:
-				System.out.println("segunda opcion seleccionada\n");
+				gestorBBDD.conector();
+				gestorBBDD.eliminarLibro(id, scan);
+				gestorBBDD.cerrar();
+				
+				Visor.mostrarMensaje("Libro eliminado");
 				break;
 			case OPCION_TRES:
 				System.out.println("tercera opcion seleccionada\n");
@@ -44,8 +52,7 @@ public class GestorLibros {
 				System.out.println("Opcion incorrecta!");
 			}
 
-		} while (opcion_menu != SALIR);
-		scan.close();
+		} while (opcion != SALIR);
 
 	}
 }

@@ -21,9 +21,10 @@ public class Menu {
 		int opcion;
 		do {
 		System.out.println("---Menu Principal---");
-		System.out.println("Gestionar libros");
-		System.out.println("Gestionar socios");
-		System.out.println("Gestionar Prestamos");
+		System.out.println(GESTIONAR_LIBROS + ". Gestionar libros");
+		System.out.println(GESTIONAR_SOCIOS + ". Gestionar socios");
+		System.out.println(GESTIONAR_PRESTAMOS + ". Gestionar Prestamos");
+		System.out.println(SALIR + ". Salir");
 		opcion = Integer.parseInt(scan.nextLine());
 		switch (opcion) {
 		case GESTIONAR_LIBROS:
@@ -38,8 +39,15 @@ public class Menu {
 			
 		case GESTIONAR_PRESTAMOS:
 			System.out.println("Confia");
-			}
-		}while (opcion != 0);
+		
+		    break;
+		    
+		case SALIR:
+			System.out.println("ADIOS");
+			break;
+		}
+			
+		}while (opcion != SALIR);
 	}
 	
 }

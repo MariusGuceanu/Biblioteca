@@ -10,7 +10,7 @@ public class Visor {
 		}
 	}
 
-	public static void mostrarLibros(Libro libro) {
+	public static void mostrarLibro(Libro libro) {
 		System.out.println(libro);
 	}
 

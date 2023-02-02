@@ -19,4 +19,14 @@ public class FormulariosDedatos {
 		return libro;
 		
 	}
+	
+	public static int pedirIdLibro (Integer id ,Scanner scan) {
+		
+		Libro libro = new Libro();
+
+		System.out.println("Introduce el id del libro a eliminar");
+		libro.setId(Integer.parseInt(scan.nextLine()));
+		
+		return libro.getId();
+	}
 }
