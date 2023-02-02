@@ -29,4 +29,21 @@ public class FormulariosDedatos {
 		
 		return libro.getId();
 	}
+	
+	public static Libro ModificarDatosLibro (Libro libro, Scanner scan) {
+		
+		System.out.println("Introduce el id del libro a cambiar");
+		libro.setId(Integer.parseInt(scan.nextLine()));
+		
+		System.out.println("Introduce el titulo del nuevo libro");
+		libro.setTitulo(scan.nextLine());
+		System.out.println("Introduce el autor del nuevo libro");
+		libro.setAutor(scan.nextLine());
+		System.out.println("Introduce el numero de paginas del libro");
+		libro.setNum_Pag(Integer.parseInt(scan.nextLine()));
+		
+		return libro;
+		
+		
+	}
 }

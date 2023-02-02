@@ -32,6 +32,14 @@ public class GestorBBDD extends Conector {
 		
 	}
 	
+	public void modificarLibro (Libro libro, Scanner scan) throws SQLException {
+		
+		libro = FormulariosDedatos.ModificarDatosLibro(libro, scan);
+		PreparedStatement preparedSt = cn.prepareStatement("UPDATE arboles SET nombre_Comun=? WHERE id = ?");
+		preparedSt.setString(1, libro.getTitulo());
+		preparedSt.executeUpdate();	
+	}
+	
 	
 }
 
