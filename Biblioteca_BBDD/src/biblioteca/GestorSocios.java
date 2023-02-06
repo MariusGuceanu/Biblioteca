@@ -1,10 +1,11 @@
 package biblioteca;
 
+import java.sql.SQLException;
 import java.util.Scanner;
 
 public class GestorSocios {
 
-	public static void run () {
+	public static void run() throws SQLException {
 		final int INSERTAR_SOCIO = 1;
 		final int BORRAR_SOCIOS = 2;
 		final int MODIFICAR_SOCIOS = 3;
@@ -15,6 +16,7 @@ public class GestorSocios {
 
 		GestorBBDD gestorBBDD = new GestorBBDD();
 		Socio socio = new Socio();
+		Integer id = null;
 		
 		do {
 			System.out.println("------MENU-------");
@@ -27,13 +29,15 @@ public class GestorSocios {
 
 			switch (opcion_menu) {
 			case INSERTAR_SOCIO:
+				gestorBBDD.conector();
 				
+				gestorBBDD.cerrar();
 				break;
 			case BORRAR_SOCIOS:
-				System.out.println("segunda opcion seleccionada\n");
+				
 				break;
 			case MODIFICAR_SOCIOS:
-				System.out.println("tercera opcion seleccionada\n");
+				
 				break;
 			case SALIR:
 				System.out.println("ADIOS");

@@ -66,10 +66,22 @@ public class GestorBBDD extends Conector {
 
 				libros.add(libro);
 			}
-			return libros;
+			
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		return null;
+		return libros;
 	}
+	
+	public void insertarSocios(Socio socio, Scanner scan) throws ClassNotFoundException, SQLException {
+
+		PreparedStatement preparedSt = getCn()
+				.prepareStatement("INSERT INTO libros (titulo, autor, num_Pag) VALUES (?,?,?)");
+	//	preparedSt.setString(1, socio.getTitulo());
+		//preparedSt.setString(2, socio.getAutor());
+	//	preparedSt.setInt(3, socio.getNum_Pag());
+//		preparedSt.execute();
+
+	}
+	
 }
