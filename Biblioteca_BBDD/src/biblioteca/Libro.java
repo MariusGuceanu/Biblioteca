@@ -5,6 +5,8 @@ public class Libro {
 	private String titulo;
 	private String autor;
 	private int num_Pag;
+	private int id;
+
 
 	public Libro() {
 		
@@ -17,7 +19,6 @@ public class Libro {
 		this.autor = autor;
 		this.num_Pag = num_Pag;
 	}
-	private int id;
 	public int getId() {
 		return id;
 	}
@@ -41,6 +42,11 @@ public class Libro {
 	}
 	public void setNum_Pag(int num_Pag) {
 		this.num_Pag = num_Pag;
+	}
+
+	@Override
+	public String toString() {
+		return "Libro [titulo=" + titulo + ", autor=" + autor + ", num_Pag=" + num_Pag + ", id=" + id + "]";
 	}
 	
 }
